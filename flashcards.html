@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Flash Cards</title>
+</head>
+<body>
+
+    <h1>Web Development Flash Cards</h1>
+
+    <div class="flashcards">
+        <p id="question"></p>
+        <p id="answer"></p>
+        <p id="progress"></p>
+        
+        <button id="show-answer">Show Answer</button> 
+        <button id="next">Next</button>   
+    </div>
+    
+    <script>
+        const cards = [
+            {
+                question:"What HTML tag is used to create a hyperlink?",
+                answer:"<a>"
+            },
+            {
+                question:"Which CSS property is used to change the text color?",
+                answer:"color"
+            },
+            {
+                question:"Which CSS property is commonly used to change the background color of an HTML element?",
+                answer:"background-color"
+            },
+            {
+                question:"Which property is used to change the size of text?",
+                answer:"font-size"
+            },
+            {
+                question:"Which tag is used to create a heading?",
+                answer:"<h1>"
+            },
+        ];
+
+        let currentIndex = 0;
+
+        const questionElement = document.querySelector("#question");
+        const answerElement = document.querySelector("#answer");
+        const progressElement = document.querySelector("#progress");
+        
+        
+        
+        const nextButton = document.querySelector("#next");
+        
+        function displayCard() {
+            const currentCard = cards[currentIndex]
+            questionElement.textContent = currentCard.question;
+            answerElement.textContent = currentCard.answer;
+            progressElement.textContent = `Card ${currentIndex + 1} of ${cards.length}`;
+            
+            answerElement.style.display = "none";
+
+    }
+        const showAnswerButton = document.querySelector("#show-answer");
+        showAnswerButton.addEventListener("click", function() {
+            answerElement.style.display = "block";
+        });
+        
+        nextButton.addEventListener("click", function() {
+        currentIndex = (currentIndex + 1) % cards.length;
+        displayCard();
+        });
+        
+        displayCard();
+        
+        
+
+
+    </script>
+
+</body>
+
+    
