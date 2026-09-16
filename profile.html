@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!----------Joining html/css---------------------->
+    <link rel="stylesheet" href="styles.css">
+<!------------------------------------------------>
+    <title>Developer Profile</title> <!--this text in the browser tab-->
+</head>
+<body>
+    <header>
+        <h1>Jeremy Opperud</h1>  <!-- The main heading of the page -->
+        <p>Software Engineering Student | Coding Temple</p>
+
+        <nav>  <!-- Navigation section -->
+            <a href="#about">About</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#skills">Skills</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <!-- About Section -->
+        <section id="about">  <!-- id="about" lets the nav link jump here -->
+            <h2>About Me</h2>
+            <p>After ten years in industrial manufacturing, I’m transitioning into software engineering and bringing a hands-on approach to technology.<p> My experience troubleshooting complex equipment, working with precision, and improving processes has shaped how I approach problems: understand the system, find the root cause, and build a practical solution.<P> I’m now applying that mindset to Python, web development, APIs, and AI to build software that solves real-world problems..</p>
+        </section>
+    
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">  <!-- Add this wrapper -->
+    
+            <article>  <!-- Each project is a self-contained article -->
+                <h3>Student Grade Tracker</h3>
+                <p>A command-line Python application that reads student data from CSV files, calculates averages, and generates summary reports. Built with proper error handling and virtual environment management.</p>
+            </article>
+    
+            <article>
+                <h3>Data Processing Pipeline</h3>
+                <p>An OOP-based data pipeline that cleans messy datasets using pandas, performs analysis with grouping and aggregation, and generates visualizations with matplotlib.</p>
+            </article>
+    
+            <article>
+                <h3>AI-Ready Task Manager API</h3>
+                <p>A FastAPI backend with JWT authentication, full CRUD operations, SQLAlchemy database integration, and automated testing with pytest.</p>
+            </article>
+            </div>
+        </section>
+    
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>  <!-- Unordered list for skills -->
+                <li>Python (pandas, matplotlib, requests)</li>
+                <li>SQL & SQLAlchemy ORM</li>
+                <li>FastAPI & REST API Design</li>
+                <li>Git & GitHub</li>
+                <li>Testing with pytest</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:m.lefayte@gmail.com">m.lefayte@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/J-Opperud" target="_blank" rel="noopener noreferrer">
+    github.com/J-Opperud
+    </a>
+</p>
+            <p>&copy; 2026 Jeremy Opperud</p>  <!-- &copy; displays the © symbol -->
+        </footer>
+</body>
+</html>
+
